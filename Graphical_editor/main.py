@@ -46,7 +46,7 @@ if __name__ == "__main__":
                     str = "The coords of the pixels must be between 1 and the number of rows or cols\n"+"Your current image have "+ str(gp.cols)+ " columns and "+ str(gp.rows)+" rows."
                     print(str, "X2 must be greater than X1!!")
             else:
-                print("Number of arguments does not satisfy any of the commands") 
+                print("Number of arguments does not satisfy any of the commands")
         elif args[0] == "F":
             if(len(args)==4):
                 if(1<=int(args[1])<=gp.cols and 1<=int(args[2])<=gp.rows):

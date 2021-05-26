@@ -1,14 +1,20 @@
 from array import *
+import sys
 
 class Graphical_editor:
     def __init__(self):
+        self.limit = 0
+        self.old_limit = sys.getrecursionlimit()
         self.rows = 0
         self.cols = 0
         self.img = None
 
     def imageMxN(self, M , N):
+        
         self.cols = M
         self.rows = N
+        self.limit = self.cols * self.rows
+        sys.setrecursionlimit(self.limit)
         self.img = [['O' for j in range(self.cols)] for i in range(self.rows)]
 
     def clear(self):
